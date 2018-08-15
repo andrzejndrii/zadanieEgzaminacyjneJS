@@ -1,0 +1,43 @@
+.case{
+    overflow: hidden;
+    margin: 0 auto;
+    width: 600px;
+    border: 4px dashed greenyellow;
+    border-radius: 20px;
+}
+h1{
+    text-transform: uppercase;
+    text-align: center;
+}
+.case1{
+    margin:10px 30px;
+}
+.case2{
+    margin: 15px;
+    width: 100%;
+}
+input[type="text"]{
+    padding: 0 5px;
+    height: 27px;
+    background: #fff;
+    font-size: 13px;
+    font-family: "Open Sans", sans-serif;
+    color: #666;
+    width: 80px;
+    border: none;
+    border-bottom: 2px solid #54a5da;
+}
+input[type="text"]:active{
+    border-bottom: 2px solid rgb(124, 82, 82); 
+}
+input[type="text"]:hover{
+    border-bottom: 2px solid rgb(40, 5, 136); 
+}
+input[type="button"]{
+    height: 35px;
+    background-color: red;
+    border-radius: 5px;
+    min-width: 115px;
+    margin: 0 10px;
+    color: white;    
+}

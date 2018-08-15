@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<title>Proste działania</title>
+	<style type="text/css">
+		
+		.case{
+			overflow: hidden;
+			margin: 0 auto;
+			width: 600px;
+			border: 4px dashed greenyellow;
+			border-radius: 20px;
+			min-height: 300px;
+		}
+		h1,
+		h2{
+			text-transform: uppercase;
+			text-align: center;
+		}
+		.case1{
+			margin:10px 30px;
+			font-size: 20px;
+		}
+		.case2{
+			margin: 15px;
+			width: 100%;
+		}
+		input[type="text"]{
+			padding: 0 5px;
+			height: 27px;
+			background: #fff;
+			font-size: 13px;
+			font-family: "Open Sans", sans-serif;
+			color: #666;
+			width: 80px;
+			border: none;
+			border-bottom: 2px solid #54a5da;
+		}
+		input[type="text"]:active{
+			border-bottom: 2px solid rgb(124, 82, 82); 
+		}
+		input[type="text"]:hover{
+			border-bottom: 2px solid rgb(40, 5, 136); 
+		}
+		input[type="button"],
+		input[type="reset"]{
+			height: 35px;
+			background-color: red;
+			border-radius: 5px;
+			min-width: 100px;
+			margin: 0 5px;
+			color: white;    
+		}
+		input[type="reset"]{
+			background-color: rgb(231, 132, 2);
+			left: 50%;
+			
+		}
+		input[type="button"]:hover,
+		input[type="reset"]:hover{
+			cursor: pointer;
+		}
+		#res{
+			width: 100%;
+			height: 30px;
+			padding-left: 30px;
+			font-size: 20px;
+		}
+
+	</style>
+	<script>
+	 	function dodawanie(){
+			var num1=document.getElementById("number_one").value;
+			var num2=document.getElementById("number_two").value;
+			if((number_one.value.length==0||number_two.value.length==0)||(isNaN(num1)||isNaN(num2))){
+				document.getElementById("res").innerHTML="Proszę uzupelnić poprawnie obie liczby";
+			}else{
+				var summa=(+num1)+(+num2);
+				document.getElementById("res").innerHTML="Wywolana funkcja dodawania liczb<br>Wynnik: <b>"+summa+"</b>";
+			}
+		}
+		function odejmowanie(){
+			var num1=document.getElementById("number_one").value;
+			var num2=document.getElementById("number_two").value;
+			if(number_one.value.length==0||number_two.value.length==0||isNaN(num1)||isNaN(num2)){
+				document.getElementById("res").innerHTML="Proszę uzupelnić poprawnie obie liczby";
+			}else{
+				var odejm=(+num1)-(+num2);
+				document.getElementById("res").innerHTML="Wywolana funkcja odejmowanie liczb<br>Wynnik: <b>"+odejm+"</b>";
+			}
+		}
+		function mnozenie(){
+			var num1=document.getElementById("number_one").value;
+			var num2=document.getElementById("number_two").value;
+			if(number_one.value.length==0||number_two.value.length==0||isNaN(num1)||isNaN(num2)){
+				document.getElementById("res").innerHTML="Proszę uzupelnić poprawnie obie liczby";
+			}else{
+				var mnoz=(+num1)*(+num2);
+				document.getElementById("res").innerHTML="Wywolana funkcja mnożenie liczb<br>Wynnik: <b>"+mnoz+"</b>";
+			}
+		}
+		function dzielenie(){
+			var num1=document.getElementById("number_one").value;
+			var num2=document.getElementById("number_two").value;
+			if(number_one.value.length==0||number_two.value.length==0||isNaN(num1)||isNaN(num2)||number_two.value==0){
+				document.getElementById("res").innerHTML="Proszę uzupelnić poprawnie obie liczby";
+			}else{
+				var dziel=(+num1)/(+num2);
+				document.getElementById("res").innerHTML="Wywolana funkcja dzielenie liczb<br>Wynnik: <b>"+dziel+"</b>";
+			}
+		}
+	</script>
+</head>
+<body>
+	<form action="" method="post">
+		<div class="case">
+			<h1>proste działanie</h1>
+			<div class="case1">
+				<span class="numberOne">Podaj pierwszą liczbę:<input type="text" placeholder="Wpisz cyfre" id="number_one"></span>
+				<span class="numberTwo">Podaj drugą liczbę:<input type="text" placeholder="Wpisz cyfre" id="number_two"></span>
+			</div>
+			<div class="case2">
+				<input type="button" value="DODAWANIE" onclick="dodawanie()">
+				<input type="button" value="ODEJMOWANIE"onclick="odejmowanie()">
+				<input type="button" value="MNOŻENIE" onclick="mnozenie()">
+				<input type="button" value="DZIELENIE"  onclick="dzielenie()">
+				<input type="reset" value="reset">
+			</div>
+			<h2>Wynnik działania programu</h2>
+			<div id="res">
+				
+			</div>
+		</div>
+	</form>
+	
+</body>
+</html>
